@@ -2,6 +2,12 @@ from flask import Blueprint, render_template, request, jsonify, redirect, url_fo
 from bson import ObjectId
 from routes.connection import mongo
 
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.sentiment import SentimentIntensityAnalyzer
+import string
+
 review_bp = Blueprint("review", __name__)
 
 @review_bp.route("/review/<book_id>", methods=['GET'])
@@ -22,8 +28,12 @@ def submit(book_id):
         email = request.form.get("email")
         name = request.form.get("name")
         review_msg = request.form.get("review")
-        
-        mongo.db.reviews.insert_one({'book_id': book_id, 'name': name, 'email': email, 'review': review_msg})
+
+        final_score = update_score(review_msg)
+        mongo.db.reviews.insert_one({'book_id': ObjectId(book_id), 'name': name, 'email': email, 'review': review_msg, 'score': final_score})
+
+        update_book_score(book_id)
+
         print("Connection successful in updating mongo")
         return redirect(url_for('book.book', book_id=book_id)) 
     
@@ -36,5 +46,36 @@ def submit(book_id):
 def email_check():
     email = request.json.get('email')
     exists = mongo.db.reviews.find_one({'email': email})
-    print(bool(exists))
+
     return jsonify({'exists': bool(exists)})
+
+
+def update_score(rev):
+    nltk.data.path.append('.venv/nltk_data')
+
+    text = rev
+    text = text.lower()
+
+    # Remove punctuation
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    
+    # Tokenize
+    words = word_tokenize(text)
+    
+    # Remove stopwords
+    stop_words = set(stopwords.words('english'))
+    cleaned_words = [word for word in words if word not in stop_words]
+    
+    text = ' '.join(cleaned_words)
+    sia = SentimentIntensityAnalyzer()
+    score = sia.polarity_scores(text)
+    return score['compound']
+
+def update_book_score(book_id):
+    pipeline = [
+        {"$match": {"book_id": ObjectId(book_id)}},
+        {"$group": {"_id": None, "avg": {"$avg": "$score"}}}
+    ]
+    score = list(mongo.db.reviews.aggregate(pipeline))
+    final_score = score[0]['avg']
+    mongo.db.books.update_one({'book_id': ObjectId(book_id)}, {'$set': { 'score': final_score}})

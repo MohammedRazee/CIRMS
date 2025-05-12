@@ -2,7 +2,6 @@
     display: flex;
     max-width: 65%;
     margin: 50px auto;
-    padding: 20px;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -10,11 +9,18 @@
 }
 
 .review-image {
+    padding: 20px;
     flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #F8EDEB;
 }
 
 .review-image > img {
-    max-width: 100%;
+    max-width: 80%;
     max-height: 400px;
     border-radius: 8px;
 }
@@ -28,6 +34,7 @@
     display: flex;
     margin: 30px 0;
     flex-flow: column;
+    gap: 10px;
 }
 
 .revForm > label {
@@ -48,6 +55,7 @@
 
 .msg {
     color: red;
+    font-size: 0.7em;
 }
 
 .submit {
