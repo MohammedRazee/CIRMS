@@ -15,20 +15,54 @@
 
         <div class="review-form">
             <h1>Tell us what you think</h1>
-            <form action="" class="revForm">
+            <form action="{{ url_for('review.submit', book_id=book._id)}}" class="revForm">
                 <label for="name">Name</label>
                     <input type="text" name="name" id="name">
 
                 <label for="email">Email
                 </label>
+                <span class="msg hide-email">hello</span>
                     <input type="email" name="email" id="email">
 
                 <label for="review">Review <br>
                 </label>
                     <textarea name="review" id="review" cols="50" rows="10"></textarea>
+
+                <input type="submit" value="Submit" class="submit">
             </form>
         </div>
 
     </div>
+
+    <script>
+        let emailValid = false;
+
+        document.getElementById('email').addEventListener('blur', async () => {
+        const email = document.getElementById('email').value;
+        const res = await fetch('/check-email', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        const msg = document.getElementsByClassName('msg');
+        if (data.exists) {
+            msg.textContent = "Email already registered!";
+            msg.style.color = "red";
+            msg.classList.remove("hide-email");
+            msg.style.display = "block";
+            emailValid = false;
+        } else {
+            emailValid = true;
+        }
+        });
+
+        document.querySelector('.revForm').addEventListener('submit', function(e) {
+        if (!emailValid) {
+            e.preventDefault();
+            // alert("Please use a different email.");
+        }
+        });
+</script>
 
 {% endblock %}

@@ -42,5 +42,26 @@
     border: 1px solid black;
 }
 
+.hide-email {
+    display: none;
+}
+
+.submit {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #1B263B;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #274472;
+}
 
 
