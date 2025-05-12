@@ -1,0 +1,85 @@
+.page-container {
+    width: 100%;
+    padding-top: 1vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: #F5F5F5;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    color: #4A4A4A;
+    
+    padding-bottom: 5vh;
+}
+.container > h1 {
+    align-self: center;
+    font-size: 2.5em;
+    margin: 5vh 0;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 25%));
+    gap: 30px;
+}
+
+.books > .item {
+    padding: 5px;
+    background-color: #F8EDEB;
+    box-shadow: 5px 5px 5px #E5989B;
+    border-radius: 5%;
+}
+
+
+.image {
+    display: flex;
+    border-radius: 2%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 200px;
+    background-color: #F8EDEB;
+}
+
+.image > img {
+    width: 80%;
+    height: 80%;
+}
+
+
+.desc {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+}
+
+.desc > .review {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+}
+
+.desc > a {
+    margin: 10px 0;
+    align-self: center;
+}
+
+.desc > a > button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #1B263B;
+    color: white;
+    border-radius: 5%;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+.desc > a > button:hover {
+    transform: scale(1.1);
+    background-color: brown;
+}

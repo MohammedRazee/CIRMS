@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.product-page {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.book-image {
+    flex: 1;
+    background-color: #F8EDEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.book-image img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+}
+
+.book-details {
+    flex: 1;
+    padding: 30px;
+}
+
+.book-details h1 {
+    margin-top: 0;
+    color: #1B263B;
+}
+
+.book-details p {
+    margin: 10px 0;
+}
+
+.review-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #1B263B;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.review-button:hover {
+    background-color: #274472;
+}
+
+.feedback-section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feedback-section > h2 {
+    margin: 10px 0;
+    color: #1B263B;
+}
+
+.feedback-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 50%));
+    gap: 10px;
+}
+
+.feedback-item {
+    background-color: #F8EDEB;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.feedback-item.hidden {
+    display: none;
+}
+
+#show-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #1B263B;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#show-more-btn:hover {
+    background-color: #274472;
+}

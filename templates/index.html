@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+{% endblock %}
+
+{% block title %}My Flask App{% endblock %}
+
+{% block content %}
+    <div class="page-container">
+        <div class="container">
+                <h1>Our Top Picks</h1>
+            {% include "books.html" %}
+        </div>
+    </div>
+{% endblock %}

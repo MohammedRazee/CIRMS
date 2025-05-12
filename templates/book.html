@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/product.css')}}">
+{% endblock %}
+
+{% block title %}My Flask App{% endblock %}
+
+{% block content %}
+    <div class="product-page">
+        <div class="book-image">
+            <img src="{{ url_for('static', filename=book.image) }}" alt="Book Cover">
+        </div>
+
+        <div class="book-details">
+            <h1>{{book.name}}</h1>
+            <p><strong>Author:</strong> {{book.author}}</p>
+            <p><strong>Publication:</strong> {{book.publish}}</p>
+            <p><strong>Year:</strong> {{book.year}}</p>
+            <p><strong>Positive Reviews:</strong> 124</p>
+            <p><strong>Negative Reviews:</strong> 8</p>
+
+            <button class="review-button">Leave a Review</button>
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <h2>What People think about it...</h2>
+        <div class="feedback-list">
+            {% for rev in review[:5] %}
+            <div class="feedback-item">
+                <p><strong>{{rev.name}}</strong> </p>
+                <br>
+                <p>"{{rev.review}}"</p>
+            </div>
+            {% endfor %}
+
+            {% for rev in review[5:] %}
+            <div class="feedback-item hidden">
+                <p><strong>{{rev.name}}</strong> </p>
+                <br>
+                <p>"{{rev.review}}"</p>
+            </div>
+            {% endfor %}
+
+        </div>
+        <button id="show-more-btn">Show More</button>
+    </div>
+
+    <script>
+        document.getElementById('show-more-btn').addEventListener('click', function () {
+            const hiddenItems = document.querySelectorAll('.feedback-item.hidden');
+            hiddenItems.forEach(item => item.classList.remove('hidden'));
+            this.style.display = 'none';
+        });
+    </script>
+
+{% endblock %}
+
