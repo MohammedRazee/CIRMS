@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/product.css')}}">
 {% endblock %}
 
-{% block title %}My Flask App{% endblock %}
 
 {% block content %}
     <div class="product-page">
@@ -20,7 +19,7 @@
             <p><strong>Positive Reviews:</strong> 124</p>
             <p><strong>Negative Reviews:</strong> 8</p>
 
-            <button class="review-button">Leave a Review</button>
+            <a href="{{ url_for('review.review', book_id=book._id)}}" class="review-button">Leave a Review</a>
         </div>
     </div>
 

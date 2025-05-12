@@ -1,0 +1,46 @@
+.review-container {
+    display: flex;
+    max-width: 65%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.review-image {
+    flex: 1;
+}
+
+.review-image > img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+}
+
+.review-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.revForm {
+    display: flex;
+    margin: 30px 0;
+    flex-flow: column;
+}
+
+.revForm > label {
+    font-size: 1.1em;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.revForm > input, .revForm > textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+

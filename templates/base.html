@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>{% block title %}My Flask App{% endblock %}</title>
+    <title>{% block title %}What The Book?{% endblock %}</title>
     {% block head %} {% endblock %}
 </head>
 <body>
@@ -14,9 +14,8 @@
         </div>
 
         <nav>
-            <li><a href="{{ url_for('home.home')}}">Home</a></li>
-            <li><a href="books.html">Books</a></li>
-            <li><a href="books.html">Leave a Review</a></li>
+            <li><a href="{{ url_for('home.home')}}">Books</a></li>
+            <!-- <li><a href="books.html">Leave a Review</a></li> -->
 
         </nav>
     </header>

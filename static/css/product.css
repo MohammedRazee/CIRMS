@@ -1,14 +1,6 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F5F5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
 .product-page {
     display: flex;
-    max-width: 1000px;
+    max-width: 65%;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 12px;
@@ -47,6 +39,7 @@ body {
 
 .review-button {
     display: inline-block;
+    text-decoration: none;
     margin-top: 20px;
     padding: 12px 20px;
     background-color: #1B263B;
@@ -67,7 +60,7 @@ body {
     flex-flow: column nowrap;
     align-items: center;
 
-    max-width: 1000px;
+    max-width: 65%;
     margin: 30px auto;
     background-color: #fff;
     border-radius: 12px;
