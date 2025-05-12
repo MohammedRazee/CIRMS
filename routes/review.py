@@ -22,24 +22,19 @@ def submit(book_id):
         email = request.form.get("email")
         name = request.form.get("name")
         review_msg = request.form.get("review")
-
-        # found_book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
-        # found_review = mongo.db.reviews.find({'book_id': found_book['_id']})
-        # found_review = list(found_review)
         
         mongo.db.reviews.insert_one({'book_id': book_id, 'name': name, 'email': email, 'review': review_msg})
         print("Connection successful in updating mongo")
-        return redirect(url_for('')) 
-    
-    # Continue heree, you were solving the routing problem
+        return redirect(url_for('book.book', book_id=book_id)) 
     
     except Exception as e:
         print(f"Error detected: {e}")
-        return render_template("book.html", title="book.name")
+        return redirect(url_for('book.book', book_id=book_id))
 
 
 @review_bp.route("/check-email", methods=['POST'])
 def email_check():
     email = request.json.get('email')
-    exists = mongo.db.users.find_one({'email': email})
+    exists = mongo.db.users.find({'email': email})
+    print("It was here")
     return jsonify({'exists': bool(exists)})

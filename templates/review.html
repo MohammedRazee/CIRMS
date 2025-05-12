@@ -15,7 +15,7 @@
 
         <div class="review-form">
             <h1>Tell us what you think</h1>
-            <form action="{{ url_for('review.submit', book_id=book._id)}}" class="revForm">
+            <form action="{{ url_for('review.submit', book_id=book._id)}}" class="revForm" method="post">
                 <label for="name">Name</label>
                     <input type="text" name="name" id="name">
 
@@ -46,6 +46,7 @@
         });
         const data = await res.json();
         const msg = document.getElementsByClassName('msg');
+        console.log(data.exists)
         if (data.exists) {
             msg.textContent = "Email already registered!";
             msg.style.color = "red";
@@ -58,9 +59,8 @@
         });
 
         document.querySelector('.revForm').addEventListener('submit', function(e) {
-        if (!emailValid) {
-            e.preventDefault();
-            // alert("Please use a different email.");
+        if (emailValid) {
+            alert("Please use a different email.");
         }
         });
 </script>
