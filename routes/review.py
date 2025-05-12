@@ -35,6 +35,6 @@ def submit(book_id):
 @review_bp.route("/check-email", methods=['POST'])
 def email_check():
     email = request.json.get('email')
-    exists = mongo.db.users.find({'email': email})
-    print("It was here")
+    exists = mongo.db.reviews.find_one({'email': email})
+    print(bool(exists))
     return jsonify({'exists': bool(exists)})

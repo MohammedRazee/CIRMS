@@ -21,7 +21,7 @@
 
                 <label for="email">Email
                 </label>
-                <span class="msg hide-email">hello</span>
+                <span class="msg hide-email"></span>
                     <input type="email" name="email" id="email">
 
                 <label for="review">Review <br>
@@ -37,31 +37,25 @@
     <script>
         let emailValid = false;
 
-        document.getElementById('email').addEventListener('blur', async () => {
-        const email = document.getElementById('email').value;
-        const res = await fetch('/check-email', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ email })
-        });
-        const data = await res.json();
-        const msg = document.getElementsByClassName('msg');
-        console.log(data.exists)
-        if (data.exists) {
-            msg.textContent = "Email already registered!";
-            msg.style.color = "red";
-            msg.classList.remove("hide-email");
-            msg.style.display = "block";
-            emailValid = false;
-        } else {
-            emailValid = true;
-        }
-        });
-
-        document.querySelector('.revForm').addEventListener('submit', function(e) {
-        if (emailValid) {
-            alert("Please use a different email.");
-        }
+        document.querySelector('.revForm').addEventListener('submit', async (e) => {
+            e.preventDefault()
+            const email = document.getElementById('email').value;
+            const res = await fetch('/check-email', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ email })
+            });
+            const data = await res.json();
+            const msg = document.querySelector('.msg');
+            if (data.exists) {
+                msg.textContent = "Email already registered!";
+                msg.classList.remove("hide-email");
+                msg.style.display = "block";
+            } else {
+                msg.style.display = "none";
+                alert("Review recieved! Thank you!");
+                e.target.submit();
+            }
         });
 </script>
 

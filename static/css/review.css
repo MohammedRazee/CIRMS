@@ -46,6 +46,10 @@
     display: none;
 }
 
+.msg {
+    color: red;
+}
+
 .submit {
     display: inline-block;
     text-decoration: none;
