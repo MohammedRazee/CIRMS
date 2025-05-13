@@ -45,7 +45,8 @@ def submit(book_id):
 @review_bp.route("/check-email", methods=['POST'])
 def email_check():
     email = request.json.get('email')
-    exists = mongo.db.reviews.find_one({'email': email})
+    book = request.json.get('check_book')
+    exists = mongo.db.reviews.find_one({'email': email, 'book_id': ObjectId(book)})
 
     return jsonify({'exists': bool(exists)})
 
@@ -69,7 +70,9 @@ def update_score(rev):
     text = ' '.join(cleaned_words)
     sia = SentimentIntensityAnalyzer()
     score = sia.polarity_scores(text)
-    return score['compound']
+    scaled = 1 + ((score['compound'] + 1) / 2) * 4
+    scaled = round(scaled, 1)
+    return scaled
 
 def update_book_score(book_id):
     pipeline = [
@@ -78,4 +81,8 @@ def update_book_score(book_id):
     ]
     score = list(mongo.db.reviews.aggregate(pipeline))
     final_score = score[0]['avg']
-    mongo.db.books.update_one({'book_id': ObjectId(book_id)}, {'$set': { 'score': final_score}})
+    final_score = round(final_score, 1)
+    print(type(final_score))
+    print(final_score)
+    mongo.db.books.update_one({'_id': ObjectId(book_id)}, {'$set': { 'score': final_score}})
+    print("Book score updated")
