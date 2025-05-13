@@ -17,30 +17,22 @@
             <p><strong>Publication:</strong> {{book.publish}}</p>
             <p><strong>Year:</strong> {{book.year}}</p>
             <p><strong>Rating:</strong> 
-                {% 
-                    set full_stars = score | int 
-                    set has_half = (score - full_stars) >= 0.25 and (score - full_stars) < 0.75 
-                    set round_up = (score - full_stars) >= 0.75 
-                    set total_filled = full_stars + (1 if round_up else 0) 
-                    set empty_stars = 5 - total_filled 
-                %}
+                {% set full_stars = score | int %}
+                {% set has_half = (score - full_stars) > 0 %}
+                {% set empty_stars = (4 - full_stars) if has_half else (5 - full_stars) %}
 
-                <!-- Full stars -->
                 {% for _ in range(full_stars) %}
                     <span class="filled">&#9733;</span>
                 {% endfor %}
 
-                <!-- Half star or rounded-up star -->
                 {% if has_half %}
                     <span class="half-filled">&#9733;</span>
-                {% elif round_up %}
-                    <span class="filled">&#9733;</span>
                 {% endif %}
 
-                <!-- Empty stars -->
                 {% for _ in range(empty_stars) %}
                     <span>&#9733;</span>
                 {% endfor %}
+                <span class="rating-val">({{ score }})</span>
             </p>
 
             <a href="{{ url_for('review.review', book_id=book._id)}}" class="review-button">Leave a Review</a>
@@ -52,7 +44,7 @@
         <div class="feedback-list">
             {% for rev in review[:5] %}
             <div class="feedback-item">
-                <p><strong>{{rev.name}}:</strong> <span>{{rev.score}}</span></p>
+                <p><strong>{{rev.name}}:</strong> <span style="color: rgb(150, 150, 1);">{{rev.score}}</span></p>
                 <br>
                 <p>"{{rev.review}}"</p>
             </div>
@@ -60,7 +52,7 @@
 
             {% for rev in review[5:] %}
             <div class="feedback-item hidden">
-                <p><strong>{{rev.name}}</strong> </p>
+                <p><strong>{{rev.name}}:</strong> <span style="color: rgb(150, 150, 1);">{{rev.score}}</span></p>
                 <br>
                 <p>"{{rev.review}}"</p>
             </div>

@@ -7,9 +7,24 @@
         <div class="desc">
             <h2>{{book.name}}</h2>
             <div class="review">
-                <h4>Positive: <span>5</span></h4>
-                <h4>Negative: <span>3</span></h4>
-                <h4>Overall: <span>2.5</span></h4>
+                <p><strong>Rating:</strong> 
+                {% set full_stars = book.score | int %}
+                {% set has_half = (book.score - full_stars) > 0 %}
+                {% set empty_stars = (4 - full_stars) if has_half else (5 - full_stars) %}
+
+                {% for _ in range(full_stars) %}
+                    <span class="filled">&#9733;</span>
+                {% endfor %}
+
+                {% if has_half %}
+                    <span class="half-filled">&#9733;</span>
+                {% endif %}
+
+                {% for _ in range(empty_stars) %}
+                    <span>&#9733;</span>
+                {% endfor %}
+                </p>
+                <p><strong>Rating: </strong> <span style="font-weight: lighter; color: rgb(150, 150, 0);">{{ book.score }}</span></p>
             </div>
             <a href="{{ url_for('book.book', book_id=book._id ) }}"><button>Know More</button></a>
         </div>

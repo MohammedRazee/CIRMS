@@ -33,6 +33,7 @@
     background-color: #F8EDEB;
     box-shadow: 5px 5px 5px #E5989B;
     border-radius: 5%;
+    
 }
 
 
@@ -44,6 +45,7 @@
     width: auto;
     height: 200px;
     background-color: #F8EDEB;
+    
 }
 
 .image > img {
@@ -55,7 +57,7 @@
 .desc {
     display: flex;
     flex-flow: column nowrap;
-    gap: 5px;
+    gap: 15px;
 }
 
 .desc > .review {
@@ -71,6 +73,7 @@
 
 .desc > a > button {
     cursor: pointer;
+    font-size: 1.1em;
     padding: 5px 10px;
     background-color: #1B263B;
     color: white;
@@ -80,6 +83,6 @@
 }
 
 .desc > a > button:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
     background-color: brown;
 }

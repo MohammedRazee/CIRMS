@@ -106,16 +106,8 @@
     background-color: #274472;
 }
 
-.filled {
-    color: gold;
-}
 
-.half-filled {
-    color: gold;
-    background: linear-gradient(to right, gold 50%, gray 50%);
-    background-clip: text;                 
-    -webkit-background-clip: text;          
-    -webkit-text-fill-color: transparent;   
-    color: transparent;                     
-    display: inline-block;
+
+.rating-val {
+    font-size: small;
 }
