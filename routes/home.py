@@ -33,9 +33,7 @@ def dash():
     revs = list(revs)
     for rev in revs:
         book = mongo.db.books.find_one({'_id': ObjectId(rev['book_id'])})
+        # book['_id'] = str(book['_id'])
         books.append(book)
-
-    print(f"Books: {books}")
-    print(f"Reviews: {revs}")
 
     return render_template("dash.html", title=session['username'], books = books, reviews = revs)

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, jsonify, redirect, url_for
+from flask import Blueprint, render_template, request, jsonify, redirect, url_for, session
 from bson import ObjectId
 from routes.connection import mongo
 
@@ -49,6 +49,25 @@ def email_check():
     exists = mongo.db.reviews.find_one({'email': email, 'book_id': ObjectId(book)})
 
     return jsonify({'exists': bool(exists)})
+
+@review_bp.route('/re-review/<book_id>', methods=['GET', 'POST'])
+def re_review(book_id):
+    try:
+        msg = request.form.get('re-review')
+
+        score = update_score(msg)
+
+        user = mongo.db.users.find_one({'name': session['username']})
+        mongo.db.reviews.update_one({'email': user['email'], 'book_id': ObjectId(book_id)}, {'$set': {'score': score, 'edit': True, 'review': msg}})
+
+        update_book_score(book_id)
+        print("Book review updated")
+        return redirect(url_for('home.dash'))
+    
+    except Exception as e:
+        print(f"Re-review error: {e}")
+        return redirect(url_for('home.dash'))
+
 
 
 def update_score(rev):

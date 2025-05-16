@@ -10,6 +10,7 @@
 
 <div class="page-container">
     <div class="container">
+        <h1 style="text-align: center;">Books You've Liked</h1>
         {% for book in books %}
         <div class="book-card">
             <div class="image">
@@ -23,6 +24,13 @@
                         <p><strong>Your Review: </strong> "{{ rev.review }}"</p>
                     {% endif %}
                 {% endfor %}
+
+                <form action="{{ url_for('review.re_review', book_id=book._id) }}" method="post" class="rev-hidden revForm">
+                    <textarea name="re-review" class="re-review rev-hidden" cols="50" rows="5" placeholder="Edit your review" required></textarea>
+                    <br>
+                    <input class="rev-hidden rev-sub" type="submit" value="Submit">
+                </form>
+                <button class="re-review-btn">Re-Review</button>
     
             </div>
         </div>
@@ -30,6 +38,25 @@
         {% endfor %}
     </div>
 </div>
+
+<script>
+    const butt = document.querySelector('.re-review-btn');
+    const tt = document.querySelector('.re-review');
+    const bb = document.querySelector('.rev-sub');
+    const pp = document.querySelector('.revForm');
+    butt.addEventListener('click', ()=> {
+        tt.classList.remove('rev-hidden');
+        bb.classList.remove('rev-hidden');
+        pp.classList.remove('rev-hidden');
+
+        tt.style.display = 'block';
+        bb.style.display = 'block';
+        pp.style.display = 'block';
+
+        butt.style.display = 'none';
+    });
+    
+</script>
 
 
 

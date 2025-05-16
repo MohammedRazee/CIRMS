@@ -44,7 +44,6 @@ def get_login():
         if not check_password_hash(user['pwd'], pwd):
             return jsonify({'exists': False, 'pwd': True})
         
-        session['user_id'] = str(user['_id'])
         session['username'] = user['name']
         print(session['username'])
         print("Logged in successfully")
