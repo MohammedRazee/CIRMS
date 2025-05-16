@@ -15,8 +15,13 @@
 
         <nav>
             <li><a href="{{ url_for('home.home')}}">Home</a></li>
-            <li><a href="{{ url_for('login.register')}}">Register</a></li>
-            <li><a href="{{ url_for('login.login')}}">Login</a></li>
+            {% if session.username %}
+                <li><a href="{{ url_for('home.dash') }}">{{session.username}}</a></li>
+                <li><a href="{{ url_for('login.logout')}}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login.register')}}">Register</a></li>
+                <li><a href="{{ url_for('login.login')}}">Login</a></li>
+            {% endif %}
 
 
         </nav>

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, Flask
+from flask import Blueprint, render_template, Flask, session
 from bson import ObjectId
 from routes.connection import mongo
 

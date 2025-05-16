@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, Flask
+from flask import Blueprint, render_template, Flask, session, redirect, url_for
+from bson import ObjectId
 from routes.connection import mongo
 import traceback
 
@@ -21,3 +22,20 @@ def home():
         print(f"Connection failed: {e}")
         traceback.print_exc()
         return render_template("index.html", title="Home Page", error="Unable to connect to the database.")
+    
+@home_bp.route("/dash", methods=['GET'])
+def dash():
+    user = mongo.db.users.find_one({'_id': ObjectId(session['user_id'])})
+    email = user['email']
+    books = []
+
+    revs = mongo.db.reviews.find({'email': email})
+    revs = list(revs)
+    for rev in revs:
+        book = mongo.db.books.find_one({'_id': ObjectId(rev['book_id'])})
+        books.append(book)
+
+    print(f"Books: {books}")
+    print(f"Reviews: {revs}")
+
+    return render_template("dash.html", title=session['username'], books = books, reviews = revs)
