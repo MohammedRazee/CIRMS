@@ -7,7 +7,7 @@ from routes.login import login_bp
 
 
 app = Flask(__name__)
-app.secret_key = 'this-key-is-insanely-secret'
+app.secret_key = 'this-key-is-insanely-secret-damn'
 
 app.register_blueprint(home_bp)
 app.register_blueprint(book_bp)
