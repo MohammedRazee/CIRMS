@@ -25,15 +25,13 @@ def home():
     
 @home_bp.route("/dash", methods=['GET'])
 def dash():
-    user = mongo.db.users.find_one({'_id': ObjectId(session['user_id'])})
-    email = user['email']
+    email = session['email']
     books = []
 
     revs = mongo.db.reviews.find({'email': email})
     revs = list(revs)
     for rev in revs:
         book = mongo.db.books.find_one({'_id': ObjectId(rev['book_id'])})
-        # book['_id'] = str(book['_id'])
         books.append(book)
 
     return render_template("dash.html", title=session['username'], books = books, reviews = revs)

@@ -14,8 +14,14 @@ review_bp = Blueprint("review", __name__)
 def review(book_id):
     try:
         review_book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
-
+        if session['username']:
+            rev = mongo.db.reviews.find_one({'book_id': ObjectId(book_id), 'email': session['email']})
+            print(rev)
+            if rev:
+                return render_template("review.html", title="review_book.name", book=review_book , book_id=book_id, rev = rev)
+        
         return render_template("review.html", title="review_book.name", book=review_book , book_id=book_id)
+
     
     except Exception as e:
         print(f"Connection fail: {e}")

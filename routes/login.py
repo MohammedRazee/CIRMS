@@ -45,6 +45,7 @@ def get_login():
             return jsonify({'exists': False, 'pwd': True})
         
         session['username'] = user['name']
+        session['email'] = user['email']
         print(session['username'])
         print("Logged in successfully")
         return jsonify({'success': True, 'redirect': url_for('home.home')})

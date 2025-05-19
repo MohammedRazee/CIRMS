@@ -17,14 +17,29 @@
             <h1>Tell us what you think</h1>
             <form action="{{ url_for('review.submit', book_id=book._id)}}" class="revForm" method="post">
                 <label for="name">Name</label>
+
+                {% if session.username %}
+                    <input type="text" name="name" id="name" value="{{ session.username }}" disabled>
+                {% else %}
                     <input type="text" name="name" id="name">
+                {% endif %}
 
                 <label for="email">Email</label>
                 <span class="msg hide-email"></span>
-                <input type="email" name="email" id="email">
 
-                <label for="review">Review <br></label>
-                <textarea name="review" id="review" cols="50" rows="10"></textarea>
+                {% if session.username %}
+                    <input type="email" name="email" id="email" value="{{ session.email }}" disabled>
+                {% else %}
+                    <input type="email" name="email" id="email">
+                {% endif %}
+
+                {% if rev %}
+                    <label for="review">Edit Review <br></label>
+                    <textarea name="review" id="review" cols="50" rows="10">{{ rev.review }}</textarea>
+                {% else %}
+                    <label for="review">Review <br></label>
+                    <textarea name="review" id="review" cols="50" rows="10"></textarea>
+                {% endif %}
 
                 <input type="submit" value="Submit" class="submit">
             </form>
