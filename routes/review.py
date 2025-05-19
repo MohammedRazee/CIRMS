@@ -31,8 +31,8 @@ def review(book_id):
 @review_bp.route("/submit/<book_id>", methods=['GET', 'POST'])
 def submit(book_id):
     try:
-        email = request.form.get("email")
-        name = request.form.get("name")
+        email = session['email']
+        name = session['username']
         review_msg = request.form.get("review")
 
         final_score = update_score(review_msg)

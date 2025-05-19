@@ -5,6 +5,7 @@ from routes.review import review_bp
 from routes.scoring import scoring_bp
 from routes.login import login_bp
 
+
 app = Flask(__name__)
 app.secret_key = 'this-key-is-insanely-secret'
 
