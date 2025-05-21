@@ -31,6 +31,32 @@
         {% block content %}
         {% endblock %}
     </main>
-</body>
+
+    <footer>
+        <div class="footer-content">
+            <div class="site-iden">
+                <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Site Logo">
+            </div>
+            <ul class="footer-sitemap">
+                <h2>SiteMap</h2>
+                <li><a href="{{ url_for('home.home') }}">Home</a></li>
+                {% if session.username %}
+                    <li><a href="{{ url_for('home.dash') }}">{{session.username}}</a></li>
+                    <li><a href="{{ url_for('login.logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login.register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login.login') }}">Login</a></li>
+                {% endif %}
+            </ul>
+            <form class="footer-form" method="post" action="#">
+                <label for="book_name">Book Name</label>
+                <input type="text" id="book_name" name="book_name" required>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" required>
+                <button type="submit">Suggest Book</button>
+            </form>
+        </div>
+    </footer>
+
 </body>
 </html>
