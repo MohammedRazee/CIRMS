@@ -33,7 +33,7 @@ def submit(book_id):
     try:
         email = session['email']
         name = session['username']
-        review_msg = request.form.get("review")
+        review_msg = request.form.get("re-review")
 
         final_score = update_score(review_msg)
         mongo.db.reviews.insert_one({'book_id': ObjectId(book_id), 'name': name, 'email': email, 'review': review_msg, 'score': final_score})

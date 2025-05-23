@@ -62,7 +62,12 @@
             <div class="feedback-item hidden">
                 <p><strong>{{rev.name}}:</strong> <span style="color: rgb(150, 150, 1);">{{rev.score}}</span></p>
                 <br>
-                <p>"{{rev.review}}"</p>
+                <p>
+                    {% if rev.edit %}
+                    <span>Edited:</span>
+                    {% endif %}
+                    "{{rev.review}}"
+                </p>
             </div>
             {% endfor %}
 
