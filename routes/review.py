@@ -82,13 +82,8 @@ def update_score(rev):
     text = rev
     text = text.lower()
 
-    # Remove punctuation
     text = text.translate(str.maketrans('', '', string.punctuation))
-    
-    # Tokenize
     words = word_tokenize(text)
-    
-    # Remove stopwords
     stop_words = set(stopwords.words('english'))
     cleaned_words = [word for word in words if word not in stop_words]
     
