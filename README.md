@@ -18,25 +18,6 @@ This project uses:
 
 ---
 
-## 📂 Project Structure
-```
-sympathy-analyzer/
-│
-├── static/
-│   ├── styles.css
-│   └── script.js
-│
-├── templates/
-│   └── index.html
-│
-├── app.py
-├── requirements.txt
-├── sympathy_database.json
-└── README.md
-```
-
----
-
 ## 🗄️ Database Setup (MongoDB)
 
 ### Steps:
@@ -44,7 +25,10 @@ sympathy-analyzer/
 2. Create a database named **Book**  
 3. Import:
    ```
-   sympathy_database.json
+   Book.books.json
+   Book.reviews.json
+   Book.scores.json
+   Book.users.json
    ```
 4. Compass will automatically create the required collections.
 
@@ -86,5 +70,3 @@ Contributions and suggestions are welcome.
 
 ---
 
-## 📜 License
-MIT License
