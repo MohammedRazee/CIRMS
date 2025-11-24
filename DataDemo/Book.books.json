@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "name": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "publish": "Charles Scribner's Sons",
+  "year": 1925,
+  "image": "images/gatsby.jpg",
+  "score": 4.4
+},
+{
+  "_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "name": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "year": 1960,
+  "image": "images/mocking.jpg",
+  "publish": "J.B. Lippincott & Co.",
+  "score": 2.4
+},
+{
+  "_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "name": "Pride and Prejudice",
+  "author": "George Orwell",
+  "publish": "Secker & Warburg",
+  "year": 1949,
+  "image": "images/pp.jpg",
+  "score": 3.2
+},
+{
+  "_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "name": "The Catcher in the Rye",
+  "author": "J.D Salinger",
+  "publish": "Little, Brown and Company",
+  "year": 1951,
+  "image": "images/cir.jpg",
+  "score": 3.3
+},
+{
+  "_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "name": "Harry Potter and the Sorcerer's Stone",
+  "author": "J.K. Rowling",
+  "publish": "Bloomsbury",
+  "year": 1997,
+  "image": "images/hpss.jpg",
+  "score": 3.4
+}]

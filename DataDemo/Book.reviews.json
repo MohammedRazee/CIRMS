@@ -1,0 +1,699 @@
+[{
+  "_id": {
+    "$oid": "681f654685587e7349aa1d13"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "razeeismail15@gmail.com",
+  "name": "Mohammed Ismail Razee",
+  "review": "Excellent book loved it",
+  "score": 4.6,
+  "edit": true
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee6b"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "eva.brown@example.com",
+  "name": "Eva Brown",
+  "review": "The Great Gatsby: A timeless classic.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee6c"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "eva.brown@example.com",
+  "name": "Eva Brown",
+  "review": "The Great Gatsby: Characters felt one-dimensional.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee6d"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "grace.kim@example.com",
+  "name": "Grace Kim",
+  "review": "The Great Gatsby: Struggled to stay engaged.",
+  "score": 4.3
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee6e"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "alice.johnson@example.com",
+  "name": "Alice Johnson",
+  "review": "The Great Gatsby: An absolute masterpiece!",
+  "score": 4.7
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee6f"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "alice.johnson@example.com",
+  "name": "Alice Johnson",
+  "review": "The Great Gatsby: The storytelling was captivating.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee70"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "grace.kim@example.com",
+  "name": "Grace Kim",
+  "review": "The Great Gatsby: Loved the depth of the characters.",
+  "score": 4.7
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee71"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "jack.wilson@example.com",
+  "name": "Jack Wilson",
+  "review": "The Great Gatsby: A timeless classic.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee72"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "The Great Gatsby: Loved the depth of the characters.",
+  "score": 4.7
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee73"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "carla.gomez@example.com",
+  "name": "Carla Gomez",
+  "review": "The Great Gatsby: A timeless classic.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "6820abc9bdfb804f303fee74"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "The Great Gatsby: Struggled to stay engaged.",
+  "score": 4.3
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01570"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "frank.moore@example.com",
+  "name": "Frank Moore",
+  "review": "To Kill a Mockingbird: Brilliant writing and plot.",
+  "score": 2.5
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01571"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "To Kill a Mockingbird: Brilliant writing and plot.",
+  "score": 2.5
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01572"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "alice.johnson@example.com",
+  "name": "Alice Johnson",
+  "review": "To Kill a Mockingbird: Loved the depth of the characters.",
+  "score": 2.6
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01573"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "daniel.lee@example.com",
+  "name": "Daniel Lee",
+  "review": "To Kill a Mockingbird: Expected more from the plot.",
+  "score": 1.6
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01574"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "alice.johnson@example.com",
+  "name": "Alice Johnson",
+  "review": "To Kill a Mockingbird: Loved the depth of the characters.",
+  "score": 2.6
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01575"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "To Kill a Mockingbird: An absolute masterpiece!",
+  "score": 2.7
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01576"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "isla.martinez@example.com",
+  "name": "Isla Martinez",
+  "review": "To Kill a Mockingbird: Struggled to stay engaged.",
+  "score": 1.7
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01577"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "alice.johnson@example.com",
+  "name": "Alice Johnson",
+  "review": "To Kill a Mockingbird: Expected more from the plot.",
+  "score": 1.6
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01578"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "alice.johnson@example.com",
+  "name": "Alice Johnson",
+  "review": "To Kill a Mockingbird: The storytelling was captivating.",
+  "score": 1.6
+},
+{
+  "_id": {
+    "$oid": "68216f910bc442f8d9f01579"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "email": "henry.white@example.com",
+  "name": "Henry White",
+  "review": "To Kill a Mockingbird: An absolute masterpiece!",
+  "score": 2.7
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f01598"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "daniel.lee@example.com",
+  "name": "Daniel Lee",
+  "review": "Pride and Prejudice: A timeless classic.",
+  "score": 2.5
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f01599"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "alice.johnson@example.com",
+  "name": "Alice Johnson",
+  "review": "Pride and Prejudice: Found it quite overrated.",
+  "score": 2.5
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f0159a"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "daniel.lee@example.com",
+  "name": "Daniel Lee",
+  "review": "Pride and Prejudice: A timeless classic.",
+  "score": 2.5
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f0159b"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "Pride and Prejudice: Writing style wasn’t for me.",
+  "score": 2.5
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f0159c"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "Pride and Prejudice: An absolute masterpiece!",
+  "score": 4
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f0159d"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "jack.wilson@example.com",
+  "name": "Jack Wilson",
+  "review": "Pride and Prejudice: An absolute masterpiece!",
+  "score": 4
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f0159e"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "carla.gomez@example.com",
+  "name": "Carla Gomez",
+  "review": "Pride and Prejudice: Brilliant writing and plot.",
+  "score": 3.9
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f0159f"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "daniel.lee@example.com",
+  "name": "Daniel Lee",
+  "review": "Pride and Prejudice: Brilliant writing and plot.",
+  "score": 3.9
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f015a0"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "eva.brown@example.com",
+  "name": "Eva Brown",
+  "review": "Pride and Prejudice: Struggled to stay engaged.",
+  "score": 2.7
+},
+{
+  "_id": {
+    "$oid": "6821713e0bc442f8d9f015a1"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "email": "carla.gomez@example.com",
+  "name": "Carla Gomez",
+  "review": "Pride and Prejudice: Struggled to stay engaged.",
+  "score": 2.7
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a2"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "grace.kim@example.com",
+  "name": "Grace Kim",
+  "review": "The catcher in the rye: A timeless classic.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a3"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "isla.martinez@example.com",
+  "name": "Isla Martinez",
+  "review": "The catcher in the rye: Found it quite overrated.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a4"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "jack.wilson@example.com",
+  "name": "Jack Wilson",
+  "review": "The catcher in the rye: A timeless classic.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a5"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "frank.moore@example.com",
+  "name": "Frank Moore",
+  "review": "The catcher in the rye: Found it quite overrated.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a6"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "carla.gomez@example.com",
+  "name": "Carla Gomez",
+  "review": "The catcher in the rye: Characters felt one-dimensional.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a7"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "grace.kim@example.com",
+  "name": "Grace Kim",
+  "review": "The catcher in the rye: Struggled to stay engaged.",
+  "score": 3.2
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a8"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "henry.white@example.com",
+  "name": "Henry White",
+  "review": "The catcher in the rye: Brilliant writing and plot.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015a9"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "frank.moore@example.com",
+  "name": "Frank Moore",
+  "review": "The catcher in the rye: An absolute masterpiece!",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015aa"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "isla.martinez@example.com",
+  "name": "Isla Martinez",
+  "review": "The catcher in the rye: Struggled to stay engaged.",
+  "score": 3.2
+},
+{
+  "_id": {
+    "$oid": "6821715d0bc442f8d9f015ab"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "The catcher in the rye: The storytelling was captivating.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015ac"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "isla.martinez@example.com",
+  "name": "Isla Martinez",
+  "review": "Harry Potter and the Sorcerer's Stone: Loved the depth of the characters.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015ad"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "henry.white@example.com",
+  "name": "Henry White",
+  "review": "Harry Potter and the Sorcerer's Stone: Characters felt one-dimensional.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015ae"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "jack.wilson@example.com",
+  "name": "Jack Wilson",
+  "review": "Harry Potter and the Sorcerer's Stone: Characters felt one-dimensional.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015af"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "henry.white@example.com",
+  "name": "Henry White",
+  "review": "Harry Potter and the Sorcerer's Stone: The storytelling was captivating.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015b0"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "daniel.lee@example.com",
+  "name": "Daniel Lee",
+  "review": "Harry Potter and the Sorcerer's Stone: Found it quite overrated.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015b1"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "isla.martinez@example.com",
+  "name": "Isla Martinez",
+  "review": "Harry Potter and the Sorcerer's Stone: An absolute masterpiece!",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015b2"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "isla.martinez@example.com",
+  "name": "Isla Martinez",
+  "review": "Harry Potter and the Sorcerer's Stone: A timeless classic.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015b3"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "bob.smith@example.com",
+  "name": "Bob Smith",
+  "review": "Harry Potter and the Sorcerer's Stone: Brilliant writing and plot.",
+  "score": 4.2
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015b4"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "daniel.lee@example.com",
+  "name": "Daniel Lee",
+  "review": "Harry Potter and the Sorcerer's Stone: Struggled to stay engaged.",
+  "score": 3.2
+},
+{
+  "_id": {
+    "$oid": "682171740bc442f8d9f015b5"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "email": "eva.brown@example.com",
+  "name": "Eva Brown",
+  "review": "Harry Potter and the Sorcerer's Stone: The storytelling was captivating.",
+  "score": 3
+},
+{
+  "_id": {
+    "$oid": "682313e5588b4313d9ab7f2b"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "name": "Mohammed Razee",
+  "email": "razeeismail15@gmail.com",
+  "review": "I loved this book. Definitely one of my top reads of 2025.",
+  "score": 4.6
+},
+{
+  "_id": {
+    "$oid": "6826cadf37a3d9b368756fd3"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe2"
+  },
+  "name": "Mohammed Razee",
+  "email": "razeeismail15@gmail.com",
+  "review": "Good book",
+  "score": 3.9
+},
+{
+  "_id": {
+    "$oid": "682ab83fce79549b3604b170"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe1"
+  },
+  "name": "Mohammed Razee",
+  "email": "razeeismail15@gmail.com",
+  "review": "It was an amazing book. I absolutely loved it. I couldn't keep it down once I picked it up and I am sure neither will you. I am sure of it!",
+  "score": 4.4,
+  "edit": true
+},
+{
+  "_id": {
+    "$oid": "682abce48016c8a6d2f890c6"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "name": "Mohammed Razee",
+  "email": "razeeismail15@gmail.com",
+  "review": "Bad book",
+  "score": 1.9
+},
+{
+  "_id": {
+    "$oid": "682ec6620886684eeadbde47"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbdf"
+  },
+  "name": "Abhilasha",
+  "email": "tamangabhilasha03@gmail.com",
+  "review": "It was a great book. Loved it to bits. Would read it again and again.",
+  "score": 4.7,
+  "edit": true
+},
+{
+  "_id": {
+    "$oid": "682ec81a0886684eeadbde48"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe0"
+  },
+  "name": "Abhilasha",
+  "email": "tamangabhilasha03@gmail.com",
+  "review": "Weird book. I don't know how or what to feel after having read this ",
+  "score": 2.6
+},
+{
+  "_id": {
+    "$oid": "682ec8450886684eeadbde49"
+  },
+  "book_id": {
+    "$oid": "681f0794c8e0082ed231fbe3"
+  },
+  "name": "Abhilasha",
+  "email": "tamangabhilasha03@gmail.com",
+  "review": "I loved this book as a kid and I love this book now. I don't know what it is about the mystical land of Harry Potter that always brings me back to it. I am glad I did too!!",
+  "score": 4.8
+}]

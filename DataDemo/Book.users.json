@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "6826cf0598e5c60293d245d2"
+  },
+  "name": "Mohammed Razee",
+  "email": "razeeismail15@gmail.com",
+  "pwd": "scrypt:32768:8:1$DEipZjW8yy3EZ7Xk$7e3cbba9500cb35393814c9277ab80191b2650bfb7f7a61f731debd54e2d38928afd31d381a63bd8918e6aa8485d104dfd5239a576a2a9b810b4fa54500ed14f"
+},
+{
+  "_id": {
+    "$oid": "6827034c467d097507b58977"
+  },
+  "name": "Abhilasha",
+  "email": "tamangabhilasha03@gmail.com",
+  "pwd": "scrypt:32768:8:1$KiVG9qWFcTp8Fmwm$ed8a2fce815ecf8d4192a1868e6c260e20f7c12a331f1097f4308aaa09acf76d06d4c99faf92727bb88c9218331f3d73f48e44e0b2bc8309ae96ac0c481004f0"
+},
+{
+  "_id": {
+    "$oid": "6833e3e99f508e3643eb13a6"
+  },
+  "name": "John",
+  "email": "sample@example.com",
+  "pwd": "scrypt:32768:8:1$c6ccLMTnnJoxKhaV$7c1cc1ed566d2603f314ea16d48161f2545313b9d0505b9f4351454b98a90c879ae298d76bed108a5f801367c795ad240df00d5972637dbb17d6bd1fce126abe"
+}]
