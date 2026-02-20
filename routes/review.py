@@ -8,6 +8,8 @@ from nltk.tokenize import word_tokenize
 from nltk.sentiment import SentimentIntensityAnalyzer
 import string
 
+nltk.download('punkt_tab')
+
 review_bp = Blueprint("review", __name__)
 
 @review_bp.route("/review/<book_id>", methods=['GET'])
@@ -34,8 +36,8 @@ def submit(book_id):
         email = session['email']
         name = session['username']
         review_msg = request.form.get("re-review")
-
         final_score = update_score(review_msg)
+        print("Here")
         mongo.db.reviews.insert_one({'book_id': ObjectId(book_id), 'name': name, 'email': email, 'review': review_msg, 'score': final_score})
 
         update_book_score(book_id)
